@@ -18,16 +18,19 @@ $('#quote').click(function() {
     });
     
     // Iterate through playerData array and build a string
-    var playerString = '';
-    playerData.forEach(function(b) {
-      playerString+= b[3] + ' & ';
-    });
+    var playerString = '<ul>';
+    for (i=0; i<playerData.length; i++) {
+      playerString+= <li>b[3]</li>;
+    }
+    playerString+= '</ul>';
 
-    var output = "<li>The combined weight of " + playerString + " is " + total + " pounds.</li>"
+    var output = "The combined weight of the players below is " + total + " pounds."
     
     // Output string to HTML
+    var intro = document.getElementById('intro');
+    intro.innerHTML = output;
     var textBlock = document.getElementById('text-block');
-    textBlock.innerHTML = output;
+    textBlock.innerHTML = playerString;
       
   });
 
