@@ -12,7 +12,7 @@ $('#quote').click(function() {
     var playerData = data['resultSets'][0]['rowSet'];
  
     // Use array.reduce() to find the combined player weight
-    playerData.reduce(function(a, b) {
+    var total = playerData.reduce(function(a, b) {
       return b[7]+a[7];
     });
     
@@ -21,10 +21,7 @@ $('#quote').click(function() {
     // });
 
     // Iterate through playerData array and build a string
-    var output = '';
-    playerData.forEach(function(x) {
-      output += "<li>The combined weight of all players is " + x[7] + " pounds.</li>"
-    });
+    var output = "<li>The combined weight of all players is " + total + " pounds.</li>"
     
     // Output string to HTML
     var textBlock = document.getElementById('text-block');
