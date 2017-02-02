@@ -26,7 +26,7 @@ $('#quote').click(function() {
     
 
 
-    var output = "<li>The combined weight of all players is " + total + " pounds.</li>"
+    var output = "<li>The combined weight of " + playerString + is " + total + " pounds.</li>"
     
     // Output string to HTML
     var textBlock = document.getElementById('text-block');
