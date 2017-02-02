@@ -15,6 +15,7 @@ $('#quote').click(function() {
     var total = 0;
     playerData.forEach(function(a) {
       total+= a[7];
+      console.log(total);
     });
     
     // var total = playerData.reduce(function(a,b) 
