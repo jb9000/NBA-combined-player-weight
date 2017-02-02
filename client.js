@@ -17,21 +17,17 @@ $('#quote').click(function() {
       total+= Number(a[7]);
     });
     
-    var output = "The combined weight of the players below is " + total + " pounds."
-    
     // Iterate through playerData array and build a string
     var playerString = '<ul>';
     for (i=0; i<playerData.length; i++) {
-      playerString+= '<li>' + playerData[i[3]] + ': ' + playerData[i[7]] + ' pounds.</li>';
-//       playerString+= '<li>';
-//       playerString+= playerData[i];
-//       playerString+= '</li>';
+      playerString+= '<li>' + playerData[i][3] + ': ' + playerData[i][7] + ' pounds.</li>';
     }
     playerString+= '</ul>';
     
-    // Output string to HTML
+    // Display the total weight in the paragraph above the Player List <ul>
     var intro = document.getElementById('intro');
-    intro.innerHTML = output;
+    intro.innerHTML = "The combined weight of the players below is " + total + " pounds.";
+    
     var playerListUL = document.getElementById('text-block');
     playerListUL.innerHTML = playerString;
       
