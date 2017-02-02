@@ -20,9 +20,10 @@ $('#quote').click(function() {
     // Iterate through playerData array and build a string
     var playerString = '<ul>';
     for (i=0; i<playerData.length; i++) {
-      playerString+= '<li>';
-      playerString+= b[3];
-      playerString+= '</li>';
+      playerString+= '<li>' + playerData[i] + '</li>';
+//       playerString+= '<li>';
+//       playerString+= playerData[i];
+//       playerString+= '</li>';
     }
     playerString+= '</ul>';
 
