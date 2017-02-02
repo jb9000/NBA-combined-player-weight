@@ -11,18 +11,21 @@ $('#quote').click(function() {
   $.getJSON (url, function(data) {
     var playerData = data['resultSets'][0]['rowSet'];
  
-    // Use array.reduce() to find the combined player weight
+    // Use playerData.forEach() to find the combined player weight
     var total = 0;
     playerData.forEach(function(a) {
       total+= Number(a[7]);
       console.log(typeof a[7]);
     });
     
-    // var total = playerData.reduce(function(a,b) 
-    //   return a[7]+b[7];                  
-    // });
-
     // Iterate through playerData array and build a string
+    var playerString = '';
+    playerData.forEach(function(b) {
+      playerString+= b[3] + ' & ';
+    });
+    
+
+
     var output = "<li>The combined weight of all players is " + total + " pounds.</li>"
     
     // Output string to HTML
