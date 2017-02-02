@@ -14,7 +14,7 @@ $('#quote').click(function() {
     // Use array.reduce() to find the combined player weight
     var total = 0;
     playerData.forEach(function(a) {
-      total+= a[7].valueAsNumber;
+      total+= Number(a[7]);
       console.log(typeof a[7]);
     });
     
