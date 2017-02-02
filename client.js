@@ -15,7 +15,6 @@ $('#quote').click(function() {
     var total = 0;
     playerData.forEach(function(a) {
       total+= Number(a[7]);
-      console.log(typeof a[7]);
     });
     
     // Iterate through playerData array and build a string
@@ -23,10 +22,8 @@ $('#quote').click(function() {
     playerData.forEach(function(b) {
       playerString+= b[3] + ' & ';
     });
-    
 
-
-    var output = "<li>The combined weight of " + playerString + is " + total + " pounds.</li>"
+    var output = "<li>The combined weight of " + playerString + " is " + total + " pounds.</li>"
     
     // Output string to HTML
     var textBlock = document.getElementById('text-block');
